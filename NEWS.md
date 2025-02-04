@@ -2,9 +2,10 @@ Development
 -----------
 
 ### NOTICES
-- None yet
+- None yet 
 
 ### Features
+* Display GeoParquet link in Catalog [16453](https://github.com/CartoDB/cartodb/pull/16453)
 * Display notifications about the new CARTO platform release [16352](https://github.com/CartoDB/cartodb/pull/16352)
 * Upgrade to deck.gl 8.5.6 [16338](https://github.com/CartoDB/cartodb/pull/16338)
 * Update DO Catalog dependencies and some changes to use bundle on CARTO Workspace [#16325](https://github.com/CartoDB/cartodb/pull/16325)
@@ -20,19 +21,24 @@ Development
 * Setting to enable/disable random username generation on SAML authentication process [16372](https://github.com/CartoDB/cartodb/pull/16372)
 * Add type guessing capabilities to the ArcGIS connector [#16385](https://github.com/CartoDB/cartodb/pull/16385)
 * Add notification about data migrations to CARTO 3 [#16405](https://github.com/CartoDB/cartodb/pull/16405)
+* Update banner to notify about data migrations to CARTO 3 [#16420](https://github.com/CartoDB/cartodb/pull/16420)
 
 ### Bug fixes / enhancements
+- Removing the full path from urls with filter parameters in the Spatial Data Catalog [#16426](https://github.com/CartoDB/cartodb/pull/16426)
 - Fix rubocop integration [#16382](https://github.com/CartoDB/cartodb/pull/16382)
 - Add marginTop to Page when notification is displayed [#16355](https://github.com/CartoDB/cartodb/pull/16355)
 - Add "element" param to DO-Catalog entry function [#16343](https://github.com/CartoDB/cartodb/pull/16343)
 - Add new DO Catalog route for internal usage [#16342](https://github.com/CartoDB/cartodb/pull/16342)
 - Propagate 'invitation_token' when there is an error signing-up with Google [#16391](https://github.com/CartoDB/cartodb/pull/16391)
+- Reverse analysis selection order on new widget form [#16412](https://github.com/CartoDB/cartodb/pull/16412)
 - Improve info for :update_user command  [#16363](https://github.com/CartoDB/cartodb/pull/16363)
 - Disable email validation in DO Premium Subscriptions [#16309](https://github.com/CartoDB/cartodb/pull/16309)
 - Invalidate sessions on 'session_salt' issue [#16376](https://github.com/CartoDB/cartodb/pull/16376)
 - Hide sharing tab from viewer in on-premises [#16299](https://github.com/CartoDB/cartodb/pull/16299)
+- Update browser version checker to allow Firefox/100.0 [#16415](https://github.com/CartoDB/cartodb/pull/16415)
 - Update analysis schemas after giving required permissions on user promotion [#16390](https://github.com/CartoDB/cartodb/pull/16390)
 - Add timeout for SQL API exports [#16377](https://github.com/CartoDB/cartodb/pull/16377)
+- Avoid deleting a user if it has shared entities [#16424](https://github.com/CartoDB/cartodb/pull/16424)
 - Remove all references to Spatial Data Catalog and Kepler GL maps in on-premises [#16293](https://github.com/CartoDB/cartodb/pull/16293)
 - Increase hard-limit of MAX_TABLES_PER_IMPORT [#16374](https://github.com/CartoDB/cartodb/pull/16374)
 - Guard code for vizjson users [#16267](https://github.com/CartoDB/cartodb/pull/16267)
@@ -90,6 +96,12 @@ Development
 - Add a check before destroying user tables in order to avoid deleting dependent maps [#16381](https://github.com/CartoDB/cartodb/pull/16381)
 - Fix duplicated attributions in datasets [#16384](https://github.com/CartoDB/cartodb/pull/16384)
 - Moving assets cdn domain from global.ssl.fastly.net to libs.cartocdn.com [#16399](https://github.com/CartoDB/cartodb/pull/16399)
+- Fix error while rolling back a user migration from one cloud to another [#16421](https://github.com/CartoDB/cartodb/pull/16421)
+- Add retry if a timeout is thrown when swapping the tables related with a sync process [#16430](https://github.com/CartoDB/cartodb/pull/16430)
+- Add AUTODETECT_SIZE_LIMIT to ogr2ogr process when guessing CSV file column types [#16431](https://github.com/CartoDB/cartodb/pull/16431)
+- Log pg locks if there is any problem during a sync table import process [#16432](https://github.com/CartoDB/cartodb/pull/16432)
+- Check pg locks during sync table swap and terminate locking queries [#16433](https://github.com/CartoDB/cartodb/pull/16433)
+- Add deprecation notice in docs [#16446](https://github.com/CartoDB/cartodb/pull/16446)
 
 4.45.0 (2021-04-14)
 -------------------
